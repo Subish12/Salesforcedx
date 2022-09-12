@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Search Product" icon-name="standard:product">
+        <lightning-layout-item size="12">
+            <lightning-input type="text" value={strSearchProdName} label="Enter Product Name" onchange={handleProductName} placeholder="Search Product"></lightning-input>
+          
+         
+
+        </lightning-layout-item>
+        <p class="slds-m-vertical_medium content">
+            Displaying {startingRecord} to {endingRecord} of {totalRecountCount} records.
+            Page {page} of {totalPage}. </p>
+         <c-search-child-component search-data={searchData1} onprevious={previousHandler} onnext={nextHandler}></c-search-child-component>
+ 
+    </lightning-card>
+</template>

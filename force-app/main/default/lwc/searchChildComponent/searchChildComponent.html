@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title='Parent To Child Data'>
+       <div if:true={searchData}>
+        <lightning-datatable data={searchData} columns={columns} key-field="id"></lightning-datatable></div>
+        <lightning-layout>
+            <lightning-layout-item>
+                <lightning-button label="Previous" icon-name="utility:chevronleft" onclick={previousHandler}></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="grow"></lightning-layout-item>
+            <lightning-layout-item>
+                <lightning-button label="Next" icon-name="utility:chevronright" icon-position="right" onclick={nextHandler}></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

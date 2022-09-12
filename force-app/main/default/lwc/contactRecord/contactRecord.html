@@ -1,0 +1,63 @@
+<template>
+<lightning-card>
+<lightning-record-edit-form object-api-name="Contact">
+<lightning-messages>Hellooooo </lightning-messages>
+<lightning-card  variant="Narrow"  title="Contact Information" icon-name="standard:account"></lightning-card>
+
+<lightning-layout>
+<lightning-layout-item size="6"><lightning-input-field field-name='Name'></lightning-input-field></lightning-layout-item>
+<lightning-layout-item size="6"><lightning-input-field field-name='Phone'></lightning-input-field></lightning-layout-item>
+</lightning-layout>
+
+<lightning-layout>
+<lightning-layout-item size="6"><lightning-input-field field-name='AccountId' required="true"></lightning-input-field></lightning-layout-item>
+<lightning-layout-item size="6"><lightning-input-field field-name='HomePhone'></lightning-input-field></lightning-layout-item>
+</lightning-layout>
+
+<lightning-layout>
+<lightning-layout-item size="6"><lightning-input-field field-name='Title'></lightning-input-field></lightning-layout-item>
+<lightning-layout-item size="6"><lightning-input-field field-name='MobilePhone'></lightning-input-field></lightning-layout-item>
+</lightning-layout>
+
+<lightning-layout>
+<lightning-layout-item size="6"><lightning-input-field field-name='Department'></lightning-input-field></lightning-layout-item>
+<lightning-layout-item size="6"><lightning-input-field field-name='OtherPhone'></lightning-input-field></lightning-layout-item>
+</lightning-layout>
+
+<lightning-layout>
+<lightning-layout-item size="6"> <lightning-input-field field-name='BirthDate'></lightning-input-field></lightning-layout-item>
+<lightning-layout-item size="6"><lightning-input-field field-name='Fax'></lightning-input-field></lightning-layout-item>
+</lightning-layout>
+
+<lightning-layout>
+<lightning-layout-item size="6"><lightning-input-field field-name='ReportsToId'></lightning-input-field></lightning-layout-item>
+<lightning-layout-item size="6"><lightning-input-field field-name='Email'></lightning-input-field></lightning-layout-item>
+</lightning-layout>
+
+<lightning-layout>
+<lightning-layout-item size="4"> <lightning-input-field field-name='AssistantName'></lightning-input-field></lightning-layout-item>
+<lightning-layout-item size="4"><lightning-input-field field-name='LeadSource'></lightning-input-field></lightning-layout-item>
+<lightning-layout-item size="4"><lightning-input-field field-name='AssistantPhone'></lightning-input-field></lightning-layout-item>
+</lightning-layout>
+
+
+
+<lightning-card  variant="Narrow"  title="Address Information" icon-name="standard:account"></lightning-card>
+<lightning-layout>
+<lightning-layout-item size="6"> <lightning-input-field field-name='MailingAddress'></lightning-input-field></lightning-layout-item>
+<lightning-layout-item size="6"><lightning-input-field field-name='OtherAddress'></lightning-input-field></lightning-layout-item>
+</lightning-layout>
+
+
+<lightning-card  variant="Narrow"  title="Description Information" icon-name="standard:account"></lightning-card>
+<lightning-input-field field-name='Description'></lightning-input-field>
+
+<lightning-card>
+<lightning-button class="slds-m-top_small" variant="destructive" type="reset"  label="Cancel" slot="footer"></lightning-button>&nbsp;&nbsp;&nbsp;
+<lightning-button class="slds-m-top_small" variant="brand" type="submit"  label="Save & Next" slot="footer"></lightning-button>&nbsp;&nbsp;&nbsp;
+<lightning-button class="slds-m-top_small" variant="Success" type="submit"  label="Save" slot="footer"></lightning-button>
+</lightning-card>
+
+</lightning-record-edit-form>
+</lightning-card>
+</template>

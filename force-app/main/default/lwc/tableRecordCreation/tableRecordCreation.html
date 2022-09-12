@@ -1,0 +1,21 @@
+<template>
+    <template if:true={accRecord}>   
+    <lightning-card title="Contact Creation" icon-name="custom:custom13">
+ <lightning-button slot="actions" variant="brand" icon-name="utility:new" onclick={pushRecord}></lightning-button>
+    <table>
+        <tr> 
+            <th>FirstName</th><th>LastName</th><th>Email</th>
+          </tr>
+          <template for:each={accRecord} for:item="accRec" for:index="index">
+          <tr key={accRec.index}> 
+            <td ><lightning-input class="validate"  type='text' data-index={index} value={accRec.FirstName} onchange={firstnameHandler} required></lightning-input></td>
+            <td><lightning-input class="validate"  type='text' data-index={index} value={accRec.LastName} onchange={lastnameHandler} required></lightning-input></td>
+            <td><lightning-input class="validate" type='text' data-index={index} value={accRec.Email} onchange={emailHandler} pattern="[A-Za-z0-9._-]+@[a-z0-9-]+\.[a-z]{2,}$" message-when-pattern-mismatch="Please enter a valid email" required></lightning-input></td>
+          </tr>
+        </template>
+        </table>
+          <lightning-button label="Save" type="submit" onclick={handleSave} slot="footer"></lightning-button>
+          <lightning-button label="Upsert" type="submit" onclick={upsertHandler} slot="footer"></lightning-button>
+</lightning-card>
+</template> 
+</template>

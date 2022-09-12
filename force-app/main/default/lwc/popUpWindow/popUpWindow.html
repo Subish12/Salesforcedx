@@ -1,0 +1,69 @@
+<template>
+
+
+        <div class="slds-box slds-theme_shade">  
+          <lightning-button label="Insert a Contact Record in LWC" icon-name="standard:contact" onclick={popup}> </lightning-button>  
+        </div>  
+     
+        <template if:true={openPopup}>  
+          <div class="slds-modal slds-fade-in-open slds-backdrop">  
+            <div class="slds-modal__container">  
+              <div class="slds-modal__header">  
+                <lightning-button-icon icon-name="utility:close" alternative-text="Close this window" size="large"  
+                  variant="bare-inverse" onclick={closePopup} class="slds-modal__close">  
+                </lightning-button-icon>  
+                <h2>Contact Creation using PopUp</h2>  
+              </div>  
+    
+              <div class="slds-modal__content slds-p-around_medium">  
+                <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                  <div class="slds-form-element">
+                    <lightning-input label="First Name" value={firstName} onchange={contactChangeVal}></lightning-input>
+                  </div>
+              </div>
+    
+              <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element">
+                    <lightning-input label="Last Name" value={lastName} onchange={contactChangeVal}></lightning-input>
+                 </div>
+              </div>
+    
+              <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element">
+                    <lightning-input label="Phone" value={phoneNo} onchange={contactChangeVal}></lightning-input>
+                 </div>
+              </div>
+    
+              <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element">
+                    <lightning-input label="Email" value={emailId} onchange={contactChangeVal} ></lightning-input>
+                 </div>
+              </div>
+    
+              <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element">
+                    <lightning-input label="Department" value={departmentVal} onchange={contactChangeVal} ></lightning-input>
+                 </div>
+              </div>
+    
+              <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                
+                <div class="slds-form-element">               
+                   <lightning-input label="Description" value={descriptionVal} onchange={contactChangeVal}></lightning-input>
+                 </div>
+                 </div>
+               
+               </div>  
+
+              <div class="slds-modal__footer">  
+                <lightning-button icon-name="utility:save" label ="Save" variant="brand" slot ="footer" onclick={saveHandler}></lightning-button>
+                &nbsp; &nbsp;
+                <lightning-button icon-name="utility:close" label="Close" variant="brand" slot="footer" onclick={closePopup}>  
+                </lightning-button>  &nbsp; &nbsp;
+              </div> 
+             
+            </div>  
+          </div>  
+        </template>  
+      </template>  
+</template>
